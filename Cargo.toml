@@ -1,0 +1,82 @@
+[package]
+name = "susyp2p"
+edition = "2018"
+description = "Peer-to-peer networking library"
+version = "0.6.0"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["peer-to-peer", "susyp2p", "networking"]
+categories = ["network-programming", "asynchronous"]
+
+[features]
+default = ["secio-secp256k1", "susyp2p-websocket"]
+secio-secp256k1 = ["susyp2p-secio/secp256k1"]
+
+[dependencies]
+bytes = "0.4"
+futures = "0.1"
+multiaddr = { package = "susy-multiaddr", version = "0.2.0", path = "./misc/multiaddr" }
+multihash = { package = "susy-multihash", version = "0.1.0", path = "./misc/multihash" }
+lazy_static = "1.2"
+susyp2p-mplex = { version = "0.6.0", path = "./muxers/mplex" }
+susyp2p-identify = { version = "0.6.0", path = "./protocols/identify" }
+susyp2p-kad = { version = "0.6.0", path = "./protocols/kad" }
+susyp2p-floodsub = { version = "0.6.0", path = "./protocols/floodsub" }
+susyp2p-ping = { version = "0.6.0", path = "./protocols/ping" }
+susyp2p-plaintext = { version = "0.6.0", path = "./protocols/plaintext" }
+susyp2p-ratelimit = { version = "0.6.0", path = "./transports/ratelimit" }
+susyp2p-core = { version = "0.6.0", path = "./core" }
+susyp2p-core-derive = { version = "0.6.0", path = "./misc/core-derive" }
+susyp2p-secio = { version = "0.6.0", path = "./protocols/secio", default-features = false }
+susyp2p-uds = { version = "0.6.0", path = "./transports/uds" }
+susyp2p-websocket = { version = "0.6.0", path = "./transports/websocket", optional = true }
+susyp2p-yamux = { version = "0.6.0", path = "./muxers/yamux" }
+parking_lot = "0.7"
+smallvec = "0.6"
+tokio-codec = "0.1"
+tokio-executor = "0.1"
+tokio-io = "0.1"
+
+[target.'cfg(not(any(target_os = "emscripten", target_os = "unknown")))'.dependencies]
+susyp2p-dns = { version = "0.6.0", path = "./transports/dns" }
+susyp2p-mdns = { version = "0.6.0", path = "./misc/mdns" }
+susyp2p-noise = { version = "0.4.0", path = "./protocols/noise" }
+susyp2p-tcp = { version = "0.6.0", path = "./transports/tcp" }
+
+[target.'cfg(any(target_os = "emscripten", target_os = "unknown"))'.dependencies]
+stdweb = { version = "0.4", default-features = false }
+
+[dev-dependencies]
+env_logger = "0.6.0"
+rand = "0.6"
+tokio = "0.1"
+tokio-stdin-stdout = "0.1"
+void = "1.0"
+
+[workspace]
+members = [
+    "core",
+    "misc/core-derive",
+    "misc/mdns",
+    "misc/multiaddr",
+    "misc/multihash",
+    "misc/multistream-select",
+    "misc/peer-id-generator",
+    "misc/rw-stream-sink",
+    "muxers/mplex",
+    "muxers/yamux",
+    "protocols/floodsub",
+    "protocols/identify",
+    "protocols/kad",
+    "protocols/noise",
+    "protocols/observed",
+    "protocols/ping",
+    "protocols/plaintext",
+    "protocols/secio",
+    "transports/dns",
+    "transports/ratelimit",
+    "transports/tcp",
+    "transports/uds",
+    "transports/websocket"
+]

@@ -1,0 +1,21 @@
+[package]
+name = "susyp2p-observed-address"
+edition = "2018"
+description = "Observed addresses protocol for susyp2p"
+version = "0.6.0"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["peer-to-peer", "susyp2p", "networking"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+bytes = "0.4"
+futures = "0.1"
+susyp2p-core = { version = "0.6.0", path = "../../core" }
+tokio-codec = "0.1"
+tokio-io = "0.1"
+unsigned-varint = { version = "0.2.1", features = ["codec"] }
+
+[dev-dependencies]
+tokio = "0.1"

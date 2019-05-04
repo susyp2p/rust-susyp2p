@@ -1,0 +1,16 @@
+[package]
+name = "susyp2p-plaintext"
+edition = "2018"
+description = "Plaintext encryption dummy protocol for susyp2p"
+version = "0.6.0"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["peer-to-peer", "susyp2p", "networking"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+futures = "0.1"
+susyp2p-core = { version = "0.6.0", path = "../../core" }
+void = "1"
+

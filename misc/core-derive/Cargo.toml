@@ -1,0 +1,21 @@
+[package]
+name = "susyp2p-core-derive"
+edition = "2018"
+description = "Procedural macros of susyp2p-core"
+version = "0.6.0"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["peer-to-peer", "susyp2p", "networking"]
+categories = ["network-programming", "asynchronous"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "0.15.22", default-features = false, features = ["clone-impls", "derive", "parsing", "printing", "proc-macro"] }
+quote = "0.6"
+
+[dev-dependencies]
+susyp2p = { version = "0.6.0", path = "../.." }
+void = "1.0"

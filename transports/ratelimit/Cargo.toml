@@ -1,0 +1,18 @@
+[package]
+name = "susyp2p-ratelimit"
+edition = "2018"
+description = "Transfer rate limiting transport adapter for susyp2p"
+version = "0.6.0"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["peer-to-peer", "susyp2p", "networking"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+aio-limited = "0.1"
+futures = "0.1"
+susyp2p-core = { version = "0.6.0", path = "../../core" }
+log = "0.4"
+tokio-executor = "0.1"
+tokio-io = "0.1"

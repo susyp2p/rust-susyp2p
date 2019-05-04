@@ -1,0 +1,32 @@
+[package]
+name = "susyp2p-identify"
+edition = "2018"
+description = "Nodes identifcation protocol for susyp2p"
+version = "0.6.0"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["peer-to-peer", "susyp2p", "networking"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+bytes = "0.4"
+fnv = "1"
+futures = "0.1"
+susyp2p-core = { version = "0.6.0", path = "../../core" }
+log = "0.4.1"
+multiaddr = { package = "susy-multiaddr", version = "0.2.0", path = "../../misc/multiaddr" }
+parking_lot = "0.7"
+protobuf = "2.3"
+smallvec = "0.6"
+tokio-codec = "0.1"
+tokio-io = "0.1.0"
+tokio-timer = "0.2.6"
+unsigned-varint = { version = "0.2.1", features = ["codec"] }
+void = "1.0"
+
+[dev-dependencies]
+susyp2p-mplex = { version = "0.6.0", path = "../../muxers/mplex" }
+susyp2p-secio = { version = "0.6.0", path = "../../protocols/secio" }
+susyp2p-tcp = { version = "0.6.0", path = "../../transports/tcp" }
+tokio = "0.1"

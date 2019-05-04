@@ -1,0 +1,15 @@
+[package]
+name = "rw-stream-sink"
+edition = "2018"
+description = "Adaptator between Stream/Sink and AsyncRead/AsyncWrite"
+version = "0.1.1"
+authors = ["Susy Technologies <admin@superstring.ch>"]
+license = "MIT"
+repository = "https://github.com/susyp2p/rust-susyp2p"
+keywords = ["networking"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+bytes = "0.4"
+futures = "0.1"
+tokio-io = "0.1"
