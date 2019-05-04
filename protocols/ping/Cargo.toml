@@ -2,7 +2,7 @@
 name = "susyp2p-ping"
 edition = "2018"
 description = "Ping protocol for susyp2p"
-version = "0.6.0"
+version = "0.7.0"
 authors = ["Susy Technologies <admin@superstring.ch>"]
 license = "MIT"
 repository = "https://github.com/susyp2p/rust-susyp2p"
@@ -12,9 +12,9 @@ categories = ["network-programming", "asynchronous"]
 [dependencies]
 arrayvec = "0.4"
 bytes = "0.4"
-susyp2p-core = { version = "0.6.0", path = "../../core" }
+susyp2p-core = { version = "0.7.0", path = "../../core" }
 log = "0.4.1"
-multiaddr = { package = "susy-multiaddr", version = "0.2.0", path = "../../misc/multiaddr" }
+multiaddr = { package = "susy-multiaddr", version = "0.4.0", path = "../../misc/multiaddr" }
 futures = "0.1"
 parking_lot = "0.7"
 rand = "0.6"
@@ -24,6 +24,9 @@ tokio-timer = "0.2.6"
 void = "1.0"
 
 [dev-dependencies]
-susyp2p-tcp = { version = "0.6.0", path = "../../transports/tcp" }
+susyp2p-tcp = { version = "0.7.0", path = "../../transports/tcp" }
+susyp2p-secio = { version = "0.7.0", path = "../../protocols/secio" }
+susyp2p-yamux = { version = "0.7.0", path = "../../muxers/yamux" }
+quickcheck = "0.8"
 tokio = "0.1"
 tokio-tcp = "0.1"

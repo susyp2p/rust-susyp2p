@@ -2,7 +2,7 @@
 name = "susyp2p-dns"
 edition = "2018"
 description = "DNS transport implementation for susyp2p"
-version = "0.6.0"
+version = "0.7.0"
 authors = ["Susy Technologies <admin@superstring.ch>"]
 license = "MIT"
 repository = "https://github.com/susyp2p/rust-susyp2p"
@@ -10,13 +10,13 @@ keywords = ["peer-to-peer", "susyp2p", "networking"]
 categories = ["network-programming", "asynchronous"]
 
 [dependencies]
-susyp2p-core = { version = "0.6.0", path = "../../core" }
+susyp2p-core = { version = "0.7.0", path = "../../core" }
 log = "0.4.1"
 futures = "0.1"
-multiaddr = { package = "susy-multiaddr", version = "0.2.0", path = "../../misc/multiaddr" }
+multiaddr = { package = "susy-multiaddr", version = "0.4.0", path = "../../misc/multiaddr" }
 tokio-dns-unofficial = "0.4"
 tokio-io = "0.1"
 
 [dev-dependencies]
-susyp2p-tcp = { version = "0.6.0", path = "../../transports/tcp" }
+susyp2p-tcp = { version = "0.7.0", path = "../../transports/tcp" }
 tokio = "0.1"

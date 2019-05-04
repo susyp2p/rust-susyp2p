@@ -2,7 +2,7 @@
 name = "susyp2p-core"
 edition = "2018"
 description = "Core traits and structs of susyp2p"
-version = "0.6.0"
+version = "0.7.0"
 authors = ["Susy Technologies <admin@superstring.ch>"]
 license = "MIT"
 repository = "https://github.com/susyp2p/rust-susyp2p"
@@ -18,7 +18,7 @@ failure = "0.1"
 fnv = "1.0"
 lazy_static = "1.2"
 log = "0.4"
-multiaddr = { package = "susy-multiaddr", version = "0.2.0", path = "../misc/multiaddr" }
+multiaddr = { package = "susy-multiaddr", version = "0.4.0", path = "../misc/multiaddr" }
 multihash = { package = "susy-multihash", version = "0.1.0", path = "../misc/multihash" }
 multistream-select = { version = "0.4.0", path = "../misc/multistream-select" }
 futures = { version = "0.1", features = ["use_std"] }
@@ -43,10 +43,10 @@ untrusted = { version = "0.6" }
 
 [dev-dependencies]
 env_logger = "0.6"
-susyp2p-ping = { version = "0.6.0", path = "../protocols/ping" }
-susyp2p-tcp = { version = "0.6.0", path = "../transports/tcp" }
-susyp2p-mplex = { version = "0.6.0", path = "../muxers/mplex" }
-susyp2p-secio = { version = "0.6.0", path = "../protocols/secio" }
+susyp2p-ping = { version = "0.7.0", path = "../protocols/ping" }
+susyp2p-tcp = { version = "0.7.0", path = "../transports/tcp" }
+susyp2p-mplex = { version = "0.7.0", path = "../muxers/mplex" }
+susyp2p-secio = { version = "0.7.0", path = "../protocols/secio" }
 rand = "0.6"
 quickcheck = "0.8"
 tokio = "0.1"

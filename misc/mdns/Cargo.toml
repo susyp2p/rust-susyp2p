@@ -1,7 +1,7 @@
 [package]
 name = "susyp2p-mdns"
 edition = "2018"
-version = "0.6.0"
+version = "0.7.0"
 description = "Implementation of the susyp2p mDNS discovery method"
 authors = ["Susy Technologies <admin@superstring.ch>"]
 license = "MIT"
@@ -13,9 +13,9 @@ categories = ["network-programming", "asynchronous"]
 data-encoding = "2.0"
 dns-parser = "0.8"
 futures = "0.1"
-susyp2p-core = { version = "0.6.0", path = "../../core" }
+susyp2p-core = { version = "0.7.0", path = "../../core" }
 log = "0.4"
-multiaddr = { package = "susy-multiaddr", version = "0.2.0", path = "../multiaddr" }
+multiaddr = { package = "susy-multiaddr", version = "0.4.0", path = "../multiaddr" }
 net2 = "0.2"
 rand = "0.6"
 smallvec = "0.6"

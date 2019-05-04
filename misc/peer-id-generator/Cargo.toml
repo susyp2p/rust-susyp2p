@@ -11,7 +11,7 @@ categories = ["network-programming", "asynchronous"]
 publish = false
 
 [dependencies]
-susyp2p-core = { version = "0.6.0", path = "../../core" }
-susyp2p-secio = { version = "0.6.0", path = "../../protocols/secio" }
+susyp2p-core = { version = "0.7.0", path = "../../core" }
+susyp2p-secio = { version = "0.7.0", path = "../../protocols/secio" }
 num_cpus = "1.8"
 rand = "0.6"

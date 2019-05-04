@@ -2,7 +2,7 @@
 name = "susyp2p-core-derive"
 edition = "2018"
 description = "Procedural macros of susyp2p-core"
-version = "0.6.0"
+version = "0.7.0"
 authors = ["Susy Technologies <admin@superstring.ch>"]
 license = "MIT"
 repository = "https://github.com/susyp2p/rust-susyp2p"
@@ -17,5 +17,5 @@ syn = { version = "0.15.22", default-features = false, features = ["clone-impls"
 quote = "0.6"
 
 [dev-dependencies]
-susyp2p = { version = "0.6.0", path = "../.." }
+susyp2p = { version = "0.7.0", path = "../.." }
 void = "1.0"
